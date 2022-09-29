@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Slab:wght@900&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Variables */
+
+:root {
+	--MAIN-FONT: "Fredoka One", cursive;
+	--OTHER-FONT: "Roboto Slab", serif;
+	--PRIMARY-COLOR: #f6fff8;
+	--DARK-COLOR: #008000;
+	--GOLD-COLOR: #ffd60a;
+}
+
+/* general styles */
+
+body {
+	background: url(/img/pexels-drew-rae-1871508.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100%;
+}
+
+main {
+	width: 100%;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* game box */
+
+.game-box {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	background: linear-gradient(
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+	);
+	border-radius: 15px;
+	padding: 0.5rem;
+}
+
+h1 {
+	color: var(--DARK-COLOR);
+	font-family: var(--MAIN-FONT);
+	margin-bottom: 1rem;
+}
+
+.init-game {
+	color: black;
+	font-family: var(--OTHER-FONT);
+	font-weight: 300;
+	font-style: italic;
+	font-size: 1.1rem;
+	margin: 0.5rem 0 1rem 0;
+}
+
+.game-data {
+	font-size: 1.2rem;
+	font-family: var(--OTHER-FONT);
+	font-weight: 300;
+	color: black;
+	margin: 0.5rem 0;
+}
+
+.btn-section {
+	margin-top: 1.2rem;
+}
+
+.btn {
+	font-size: 1rem;
+	font-weight: bold;
+	font-family: var(--OTHER-FONT);
+	color: var(--GOLD-COLOR);
+	background-color: var(--DARK-COLOR);
+	padding: 0.25rem 0.5rem;
+	width: 50%;
+	margin: 0.25rem 0;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+/* Media queries */
+
+/* 380px on width portrait */
+
+@media all and (min-width: 380px) and (orientation: portrait) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	.game-box .game-data {
+		font-size: 1.5rem;
+	}
+
+	.btn {
+		font-size: 1.2rem;
+		width: 70%;
+	}
+}
+
+/* 768px tablet on width portrait*/
+
+@media all and (min-width: 768px) and (orientation: portrait) {
+	.game-box {
+		padding: 2rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	.init-game {
+		font-size: 2rem;
+	}
+
+	.game-box .game-data {
+		font-size: 2rem;
+	}
+
+	.btn {
+		font-size: 2rem;
+		margin: 0.5rem 0;
+	}
+}
+
+/* 1000px height ipad pro */
+
+@media all and (min-height: 1000px) and (orientation: portrait) {
+	.game-box {
+		width: 80%;
+	}
+}
+
+/* ---------------------------------------------------------------- */
+
+/* media queries but on landscape */
+
+@media all and (min-width: 480px) and (orientation: landscape) {
+	h1 {
+		font-size: 2rem;
+		margin-top: 0.5rem;
+	}
+
+	.game-data {
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	.btn {
+		width: 40%;
+		font-size: 1rem;
+	}
+}
+
+@media all and (min-width: 650px) and (orientation: landscape) {
+	.game-box {
+		padding: 0;
+	}
+
+	#cards-el,
+	#sum-el,
+	#player-el {
+		font-size: 1.2rem;
+	}
+
+	.init-game {
+		font-size: 1.5rem;
+	}
+}
+
+@media all and (min-width: 800px) and (orientation: landscape) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	.game-box {
+		padding: 1rem;
+	}
+
+	#cards-el,
+	#sum-el,
+	#player-el {
+		font-size: 1.5rem;
+	}
+}
+
+/* 1000px laptop screen*/
+
+@media all and (min-width: 1000px) and (orientation: landscape) {
+	.game-box {
+		width: 60%;
+		padding: 2rem;
+	}
+
+	h1 {
+		font-size: 4rem;
+	}
+
+	#cards-el,
+	#sum-el,
+	#player-el {
+		font-size: 2rem;
+	}
+
+	.init-game {
+		font-size: 2rem;
+	}
+
+	.btn {
+		font-size: 1.5rem;
+	}
+}
